@@ -1,3 +1,3 @@
 # ShARPR
 
-A cryptocurency tracking and analytics app.
+A cryptocurrency tracking and analytics app built on the MERN Stack.
