@@ -1,3 +1,3 @@
 # Sharrp
 
-A web-based password manager based on zero-knowledge encryption.
+A web-based Financial Data Tracker based on zero-knowledge encryption.
