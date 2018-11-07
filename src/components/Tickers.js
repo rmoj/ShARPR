@@ -14,6 +14,7 @@ class Tickers extends Component {
         //   wanted.includes(currency.id)
         // );
         // 
+        // 
         const result = response.data;
         console.log(result);
         this.setState({ data: result });
