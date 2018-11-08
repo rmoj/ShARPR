@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Tickers from "./components/Tickers";
 import "./App.css";
+import Tickersfew from "./components/Tickersfew";
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
         <div className="App-header">
           <img src="./SHARPR.png" alt="SHARPR LOGO" />
         </div>
-        <Tickers />
+        <Tickersfew />
       </div>
     );
   }
