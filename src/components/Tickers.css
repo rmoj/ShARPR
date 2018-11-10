@@ -3,3 +3,13 @@
   padding: 0;
   display: inline-flex;
 }
+
+@media only screen and (max-width: 768px) {
+  .tickers {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+}

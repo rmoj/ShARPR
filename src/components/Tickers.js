@@ -13,7 +13,7 @@ class Tickers extends Component {
         // var result = response.data.filter(currency =>
         //   wanted.includes(currency.id)
         // );
-        // 
+        //
         const result = response.data;
         console.log(result);
         this.setState({ data: result });
@@ -40,7 +40,7 @@ class Tickers extends Component {
     return (
       <div className="tickers-containers">
         <ul className="tickers">{tickers}</ul>
-        <p>Information takes 1 minute to fetch</p>
+        <p>Information takes 1 minute to fetch (All prices shown in USD)</p>
       </div>
     );
   }

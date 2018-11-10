@@ -1,0 +1,57 @@
+.currency {
+  margin-top: 10px;
+  padding: 2px 20px 10px 20px;
+}
+
+.amount {
+  /* float: left; */
+  height: 30px;
+  border-radius: 2px;
+  border-style: solid;
+  border-color: #b3b3b3;
+  border-top: 1px solid silver;
+  border-width: 0.5px;
+  color: #878787;
+  font-size: medium;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.currencySelector {
+  height: 33px;
+  width: 200px;
+  border-radius: 3px;
+  border-color: silver;
+  background-color: whitesmoke;
+  margin: 0px 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .currency {
+    margin-top: 10px;
+    padding: 2px 20px;
+  }
+
+  .amount {
+    /* float: left; */
+    height: 30px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: #b3b3b3;
+    border-top: 1px solid silver;
+    border-width: 0.5px;
+    color: #878787;
+    font-size: medium;
+    text-align: right;
+    padding-right: 10px;
+  }
+
+  .currencySelector {
+    height: 33px;
+    width: 205px;
+    border-radius: 3px;
+    border-color: silver;
+    background-color: whitesmoke;
+    margin: 10px 5px;
+  }
+}

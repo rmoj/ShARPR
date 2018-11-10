@@ -92,7 +92,7 @@ class Tickersfew extends Component {
     return (
       <div className="tickers-containers">
         <ul className="tickers">{tickers}</ul>
-        <p>Information takes 1 minute to fetch</p>
+        <p>Information takes 1 minute to fetch (All prices shown in USD)</p>
       </div>
     );
   }
