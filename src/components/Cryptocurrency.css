@@ -20,3 +20,54 @@
   background-color: rgb(65, 65, 247);
   border-bottom: solid 4px blue;
 } */
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  .cryptocurrency {
+    /* padding: 1rem 2rem 2rem; */
+    /* margin: 1rem; */
+    border-radius: 0.5rem;
+    /* width: 50%; */
+    /* height: 50%; */
+    border: solid 1px rgba(0, 0, 0, 0.05);
+    background-color: rgb(238, 187, 49);
+    border-bottom: solid 4px orange;
+    margin: 10px auto;
+    float: left;
+    margin: 10px;
+  }
+
+  .cryptocurrency p {
+    color: rgba(0, 0, 0, 0.75);
+  }
+
+  .cryptocurrency-name {
+    font-size: 0.9rem;
+  }
+
+  .bitcoin,
+  .ethereum,
+  .litecoin,
+  .bitcoin-cash,
+  .ethereum-classic {
+    background-color: rgb(238, 187, 49);
+    border-bottom: solid 4px orange;
+    padding: 1px;
+  }
+
+  .bitcoin p,
+  .ethereum p,
+  .litecoin p,
+  .bitcoin-cash p,
+  .ethereum-classic p {
+    height: 10px;
+  }
+
+  h2 {
+    margin-top: 20px;
+    height: 20px;
+  }
+}
