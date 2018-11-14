@@ -6,12 +6,12 @@
 
 .App__Aside {
   width: 50%;
-  background-color: #66dac7;
+  background-color: coral;
 }
 
 .App__Form {
   width: 50%;
-  background-color: #2e4158;
+  background-color: white;
   padding: 25px 40px;
   overflow: auto;
 }
@@ -23,8 +23,8 @@
 }
 
 .PageSwitcher__Item {
-  background-color: #4c5d72;
-  color: #9da6b1;
+  background-color: coral;
+  color: white;
   padding: 10px 25px;
   cursor: pointer;
   font-size: 0.9em;
@@ -35,8 +35,8 @@
 }
 
 .PageSwitcher__Item--Active {
-  background-color: #5ed0c0;
-  color: white;
+  background-color: white;
+  color: #707c8b;
 }
 
 .PageSwitcher__Item:first-child {
@@ -72,8 +72,8 @@
 }
 
 .FormTitle__Link--Active {
-  color: white;
-  border-bottom: 1px solid #199087;
+  color: #707c8b;
+  border-bottom: 1px solid coral;
 }
 
 .FormField {
@@ -104,7 +104,7 @@
 }
 
 .FormField__Button {
-  background-color: #52c4b9;
+  background-color: coral;
   color: white;
   border: none;
   outline: none;
@@ -118,7 +118,7 @@
   color: #66707d;
   text-decoration: none;
   display: inline-block;
-  border-bottom: 1.5px solid #225e62;
+  border-bottom: 1.5px solid coral;
   padding-bottom: 5px;
 }
 
@@ -133,7 +133,7 @@
 }
 
 .FormField__TermsLink {
-  color: white;
+  color: #707c8b;
   border-bottom: 1px solid #199087;
   text-decoration: none;
   display: inline-block;
