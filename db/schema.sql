@@ -1,9 +1,9 @@
+-- Creating user table
 DROP DATABASE IF EXISTS sharprdb;
 CREATE DATABASE sharprdb;
 
 USE sharprdb;
 
--- Creating user table
 CREATE TABLE user
 (
   userID mediumint
@@ -19,6 +19,7 @@ primary key
 );
 
   -- Creating coins table
+
   CREATE TABLE coins
   (
     id MEDIUMINT
@@ -27,8 +28,8 @@ ImageUrl VARCHAR
     (2000) NOT NULL,
 Symbol VARCHAR
     (100) NOT NULL, 
-CoinName VARCHAR
-    (255) NOT NULL,
+CoinName varchar
+    (50) NOT NULL,
 key
     (id),
 primary key
@@ -36,6 +37,7 @@ primary key
 );
 
     -- Creating userCoins table
+
     CREATE TABLE userCoins
     (
       id MEDIUMINT
@@ -57,7 +59,3 @@ constraint fk_Symbol foreign key
       delete cascade on
       update cascade
 );
-
-      select *
-      from userCoins
-      order by id;
