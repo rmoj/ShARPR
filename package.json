@@ -11,10 +11,10 @@
     "react-dom": "^16.6.0",
     "react-scripts": "2.1.1"
   },
-  "scripts": {
-    "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
-  },
+  // "scripts": {
+  //   "start": "node index.js",
+  //   "heroku-postbuild": "cd client && npm install && npm run build"
+  // },
   "scripts": {
     "install": "(cd client && yarn) && (cd server && yarn)",
     "start": "concurrently \"cd client && PORT=3000 yarn start\" \"cd server && PORT=5000 yarn start\""
