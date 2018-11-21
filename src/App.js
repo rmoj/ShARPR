@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
+import Details from './components/Details/Details';
 import Tickersfew from "./components/Tickersfew";
 import CurrencyGroupPair from "./components/currencyConverter";
 
+
 class App extends Component {
+
+  //state = { coin: '' }
+  coin = 'BTC';
+
   render() {
     return (
       <div className="App">
@@ -12,6 +18,8 @@ class App extends Component {
         </div>
         <Tickersfew />
         <CurrencyGroupPair />
+        <Details coin={this.coin} />
+        {/* change to this.state.coin */}
       </div>
     );
   }
