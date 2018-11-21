@@ -11,18 +11,21 @@
     "react-dom": "^16.6.0",
     "react-scripts": "2.1.1"
   },
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && yarn install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build",
   },
-  "scripts": {
-    "install": "(cd client && yarn) && (cd server && yarn)",
-    "start": "concurrently \"cd client && PORT=3000 yarn start\" \"cd server && PORT=5000 yarn start\""
-  },
+
   "eslintConfig": {
     "extends": "react-app"
   },
+
   "browserslist": [
     ">0.2%",
     "not dead",
