@@ -3,6 +3,7 @@ import DetailsGraph from './DetailsGraph';
 import './Details.css';
 import api from './api';
 // import DetailsCard from './DetailsCard'
+//testing
 
 class Details extends Component {
 
