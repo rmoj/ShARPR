@@ -2,18 +2,13 @@ import React, { Component } from 'react';
 import DetailsGraph from './DetailsGraph';
 import './Details.css';
 import api from './api';
-// import DetailsCard from './DetailsCard'
-//testing
+
 
 class Details extends Component {
 
   coin = this.props.coin;
 
   get30DayHistoryData(coin) {
-    // api.getHourlyHistoryData(coin).then(histData => {
-    //   this.setState({ data: histData });
-    // })
-
     api.get30DayData(coin).then(histData => {
       this.setState({ data: histData, title: '30 Day Price Chart' });
     })
