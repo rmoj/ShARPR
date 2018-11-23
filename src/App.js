@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { Component } from "react";
-import "./App.css";
-import Details from './components/Details/Details';
-import Tickersfew from "./components/Tickersfew";
-import CurrencyGroupPair from "./components/currencyConverter";
-=======
 import React, { Component } from 'react';
 import './App.css';
 import Tickersfew from './components/Tickersfew';
@@ -19,8 +12,6 @@ import {
 } from 'semantic-ui-react/dist/commonjs';
 
 import CoinList from './components/coinList';
->>>>>>> 89fba3ef03a336d0ff6eb30b8a810dadbd8a4954
-
 
 class App extends Component {
 
@@ -35,10 +26,6 @@ class App extends Component {
         </div>
         <Tickersfew />
         <CurrencyGroupPair />
-<<<<<<< HEAD
-        <Details coin={this.coin} />
-        {/* change to this.state.coin */}
-=======
         <Container style={{ padding: '2em 0em' }}>
           <Menu borderless secondary>
             <Menu.Item>
@@ -58,7 +45,6 @@ class App extends Component {
 
           <CoinList />
         </Container>
->>>>>>> 89fba3ef03a336d0ff6eb30b8a810dadbd8a4954
       </div>
     );
   }
