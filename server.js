@@ -7,7 +7,11 @@ var PORT = process.env.PORT || 3001;
 
 server.use('/api/v1', router);
 
-server.use(express.static(path.join(__dirname, 'public/')));
+if (process.env.NODE_ENV === 'production') {
+  server.use(express.static(path.join(__dirname, 'build/')));
+} else {
+  server.use(express.static(path.join(__dirname, 'public/')));
+}
 
 server.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + 'public/index.html'));
