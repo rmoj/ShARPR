@@ -2,10 +2,14 @@
   "name": "sharpr",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000/",
+  "proxy": "http://localhost:3001/",
+  "engines": {
+    "node": "10.1.0"
+  },
   "dependencies": {
     "@cra-express/core": "^4.0.0",
     "axios": "^0.18.0",
+    "concurrently": "^4.1.0",
     "json-server": "^0.14.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
@@ -13,10 +17,12 @@
     "semantic-ui-react": "^0.83.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "client": "react-scripts start",
+    "server": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "eslintConfig": {
     "extends": "react-app"
