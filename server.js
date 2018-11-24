@@ -7,10 +7,10 @@ var PORT = process.env.PORT || 3001;
 
 server.use('/api/v1', router);
 
-server.use(express.static(path.join(__dirname, './public/')));
+server.use(express.static(path.join(__dirname, 'public/')));
 
 server.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + './public/index.html'));
+  res.sendFile(path.join(__dirname + 'public/index.html'));
 });
 
 server.listen(PORT, function() {
