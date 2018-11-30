@@ -127,8 +127,6 @@ server.post("/coins/user/:email", function(req, res) {
 
 // Get all Coins Favorated by User - Working!!!
 server.get("/coins/email/:email", function(req, res) {
-  // console.log(req.body);
-
   if (!req.body) return res.sendStatus(400);
 
   var queryString = "SELECT * FROM userCoins WHERE email=?";
