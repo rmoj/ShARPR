@@ -16,6 +16,10 @@ import CurrencyGroupPair from './components/currencyConverter';
 import CoinContainer from './components/coinContainer';
 
 class App extends Component {
+
+  //state = { coin: '' }
+  coin = 'BTC';
+
   render() {
     return (
       <Router>
