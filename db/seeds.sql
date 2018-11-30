@@ -31,6 +31,7 @@ VALUES
 
 UPDATE user SET userName="Parth007", email="noemailParth@email.com" WHERE email="noemailParth@email.com";
 delete from user where email = "noemailAli@email.com";
+delete from user where email = "undefined";
 
 --seeds for coins table
 select *
@@ -39,7 +40,7 @@ order by id limit 0,1200;
 select * from coins
 where Symbol = "BTC";
 select *
-from products
+from coins
 where CoinName = "Bitcoin";
 
 INSERT INTO coins
@@ -60,3 +61,8 @@ delete from coins where id = 1045;
 select *
 from userCoins
 order by id;
+
+INSERT INTO userCoins
+  (Symbol, email)
+VALUES
+  ("BTC", "Sharpr1@gmail.com");
