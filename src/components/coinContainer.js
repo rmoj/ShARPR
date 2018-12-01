@@ -1,5 +1,6 @@
 import React from 'react';
 import CoinList from './coinList';
+import Navbar from './Navbar.js';
 import {
   Button,
   Container,
@@ -10,6 +11,7 @@ import {
 
 const coinContainer = () => (
   <Container style={{ padding: '2em 0em' }}>
+    <Navbar />
     <Menu borderless secondary>
       <Menu.Item>
         <Header>Cryptocurrency Prices</Header>

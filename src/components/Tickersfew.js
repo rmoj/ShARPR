@@ -1,20 +1,21 @@
-import React, { Component } from "react";
-import axios from "axios";
-import Cryptocurrency from "./Cryptocurrency";
+import React, { Component } from 'react';
+import axios from 'axios';
+import Cryptocurrency from './Cryptocurrency';
+import Navbar from './Navbar.js';
 
-import "./Tickers.css";
+import './Tickers.css';
 
 class Tickersfew extends Component {
   fetchCryptocurrencyData() {
     axios
-      .get("https://api.coinmarketcap.com/v1/ticker/")
+      .get('https://api.coinmarketcap.com/v1/ticker/')
       .then(response => {
         var wanted = [
-          "bitcoin",
-          "ethereum",
-          "litecoin",
-          "bitcoin-cash",
-          "ethereum-classic"
+          'bitcoin',
+          'ethereum',
+          'litecoin',
+          'bitcoin-cash',
+          'ethereum-classic'
         ];
         var result = response.data.filter(currency =>
           wanted.includes(currency.id)
@@ -37,49 +38,49 @@ class Tickersfew extends Component {
   state = {
     data: [
       {
-        id: "bitcoin",
-        name: "Bitcoin",
-        symbol: "BTC",
-        price_usd: "1",
-        percentage_change_1h: "0",
-        percentage_change_24h: "0",
-        percentage_change_7d: "0"
+        id: 'bitcoin',
+        name: 'Bitcoin',
+        symbol: 'BTC',
+        price_usd: '1',
+        percentage_change_1h: '0',
+        percentage_change_24h: '0',
+        percentage_change_7d: '0'
       },
       {
-        id: "ethereum",
-        name: "Ethereum",
-        symbol: "ETH",
-        price_usd: "1",
-        percentage_change_1h: "0",
-        percentage_change_24h: "0",
-        percentage_change_7d: "0"
+        id: 'ethereum',
+        name: 'Ethereum',
+        symbol: 'ETH',
+        price_usd: '1',
+        percentage_change_1h: '0',
+        percentage_change_24h: '0',
+        percentage_change_7d: '0'
       },
       {
-        id: "litecoin",
-        name: "Litecoin",
-        symbol: "LTC",
-        price_usd: "1",
-        percentage_change_1h: "0",
-        percentage_change_24h: "0",
-        percentage_change_7d: "0"
+        id: 'litecoin',
+        name: 'Litecoin',
+        symbol: 'LTC',
+        price_usd: '1',
+        percentage_change_1h: '0',
+        percentage_change_24h: '0',
+        percentage_change_7d: '0'
       },
       {
-        id: "bitcoin-cash",
-        name: "Bitcoin Cash",
-        symbol: "BCH",
-        price_usd: "1",
-        percentage_change_1h: "0",
-        percentage_change_24h: "0",
-        percentage_change_7d: "0"
+        id: 'bitcoin-cash',
+        name: 'Bitcoin Cash',
+        symbol: 'BCH',
+        price_usd: '1',
+        percentage_change_1h: '0',
+        percentage_change_24h: '0',
+        percentage_change_7d: '0'
       },
       {
-        id: "ethereum-classic",
-        name: "Ethereum Classic",
-        symbol: "ETC",
-        price_usd: "1",
-        percentage_change_1h: "0",
-        percentage_change_24h: "0",
-        percentage_change_7d: "0"
+        id: 'ethereum-classic',
+        name: 'Ethereum Classic',
+        symbol: 'ETC',
+        price_usd: '1',
+        percentage_change_1h: '0',
+        percentage_change_24h: '0',
+        percentage_change_7d: '0'
       }
     ]
   };
@@ -91,6 +92,7 @@ class Tickersfew extends Component {
 
     return (
       <div className="tickers-containers">
+        <Navbar />
         <ul className="tickers">{tickers}</ul>
         <p>Information takes 1 minute to fetch (All prices shown in USD)</p>
       </div>
