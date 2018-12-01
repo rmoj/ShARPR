@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import SignIn from './SignInUiPage/SignIn';
 import SignUp from './SignInUiPage/SignUp';
+import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Navbar from './components/Navbar.js';
+import './components/Navbar.css'
 import './App.css';
 import './SignInUiPage/AppSignUi.css';
 import {
@@ -22,7 +26,9 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <div>
+        <Navbar />
+       <Router>
         <Switch>
           <Route exact path="/" component={SignUp} />
           <Route exact path="sign-up" component={SignUp} />
@@ -32,7 +38,8 @@ class App extends Component {
           <Route exact path="/prices" component={CoinContainer} />
           <Route component={SignUp} />
         </Switch>
-      </Router>
+        </Router>
+      </div>
     );
   }
 }
