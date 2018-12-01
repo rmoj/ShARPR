@@ -1,8 +1,9 @@
-import React, { Component } from "react";
-import "./currencyConverter.css";
+import React, { Component } from 'react';
+import './currencyConverter.css';
+import Navbar from './Navbar.js';
 
-const PATH_BASE = "https://free.currencyconverterapi.com/api/v6";
-const PATH_CURRENCIES = "/currencies";
+const PATH_BASE = 'https://free.currencyconverterapi.com/api/v6';
+const PATH_CURRENCIES = '/currencies';
 // const PATH_CONVERT = '/convert';
 // const PARAM_CONVERT = 'q=';
 // const PARAM_COMPACT = 'compact=y';
@@ -77,7 +78,7 @@ class CurrencyGroupPair extends Component {
       value: Array(2).fill(0),
       exchange_rate: 1,
       all_currencies: [],
-      currencies: ["ALL", "ALL"]
+      currencies: ['ALL', 'ALL']
     };
 
     fetch(`${PATH_BASE}${PATH_CURRENCIES}`)
@@ -97,11 +98,11 @@ class CurrencyGroupPair extends Component {
     // let url = `${PATH_BASE}${PATH_CONVERT}?${PARAM_CONVERT}${searchTerm}&${PARAM_COMPACT}`;
     // https://free.currencyconverterapi.com/api/v6/convert?q=USD_PHP&compact=y
     let url =
-      "https://free.currencyconverterapi.com/api/v6/convert?q=" +
+      'https://free.currencyconverterapi.com/api/v6/convert?q=' +
       source +
-      "_" +
+      '_' +
       destination +
-      "&compact=y";
+      '&compact=y';
 
     // console.log(url);
     fetch(url)
@@ -114,15 +115,15 @@ class CurrencyGroupPair extends Component {
   updateExchangeRate(message, source, destination) {
     console.log(message);
     this.setState({
-      exchange_rate: message[source + "_" + destination]["val"]
+      exchange_rate: message[source + '_' + destination]['val']
     }); // update existing values based on new exchange rate
     var value1 = this.state.value[0];
     var value2 = this.state.value[1];
     value2 = value1 * this.state.exchange_rate;
     this.setState({ value: [value1, value2] });
-    console.log("value2: " + value2);
-    console.log("value1: " + value1);
-    console.log("rate: " + this.state.exchange_rate);
+    console.log('value2: ' + value2);
+    console.log('value1: ' + value1);
+    console.log('rate: ' + this.state.exchange_rate);
     console.log(this.state.exchange_rate);
   }
 
@@ -151,13 +152,13 @@ class CurrencyGroupPair extends Component {
     if (position === 1) {
       var value2 = event.target.value;
       var value1 = value2 / this.state.exchange_rate;
-      console.log("value1: " + value1 + ",value2: " + value2);
+      console.log('value1: ' + value1 + ',value2: ' + value2);
     }
     this.setState({ value: [value1, value2] });
   }
 
   recordCurrency(position, event) {
-    console.log(position + " " + event.target.value);
+    console.log(position + ' ' + event.target.value);
     var currency = event.target.value;
     var currencies = this.state.currencies;
     currencies[position] = currency;
@@ -170,6 +171,7 @@ class CurrencyGroupPair extends Component {
   render() {
     return (
       <div className="currency">
+        <Navbar />
         {/* position parameter helps differentiate who is the top and who is the bottom group*/}
         <hr />
         <h1>CURRENCY CONVERTER</h1>
