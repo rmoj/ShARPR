@@ -39,11 +39,11 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/#/prices">Dashboard</NavLink>
+                <NavLink href="/#/prices">Prices</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://coinmarketcap.com/converter/">
-                  Currency
+                <NavLink href="/#/converter">
+                  Converter
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
