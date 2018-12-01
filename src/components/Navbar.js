@@ -42,34 +42,22 @@ export default class Example extends React.Component {
                 <NavLink href="/#/prices">Prices</NavLink>
               </NavItem>
 
-
               <NavItem>
-              <NavLink href="/#/converter">
-                  Converter
-              </NavLink>
+                <NavLink href="/#/converter">Converter</NavLink>
               </NavItem>
-
 
               <NavItem>
                 <NavLink href="/#/home">Tickers</NavLink>
               </NavItem>
 
               <NavItem>
-              <NavLink href="/">
-                 Graph
-              </NavLink>
+                <NavLink href="/">Graph</NavLink>
               </NavItem>
 
               <NavItem>
-              <NavLink href="/">
-                Analytics
-              </NavLink>
+                <NavLink href="/">Analytics</NavLink>
               </NavItem>
 
-
-
-
-              
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Profile
@@ -77,7 +65,7 @@ export default class Example extends React.Component {
                 <DropdownMenu right>
                   <DropdownItem>Edit</DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem>LogOut</DropdownItem>
+                  <DropdownItem href="/#/sign-in">LogOut</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
