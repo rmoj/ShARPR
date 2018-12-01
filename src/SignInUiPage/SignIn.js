@@ -11,7 +11,7 @@ import {
 const SignIn = () => (
   <div className="App">
     <div className="App-header">
-      <img className="App-logo" src="./public/SHARPR.png" alt="SHARPR LOGO" />
+      <img className="App-logo" src="./SHARPR.png" alt="SHARPR LOGO" />
     </div>
 
     <div className="AppUi">
